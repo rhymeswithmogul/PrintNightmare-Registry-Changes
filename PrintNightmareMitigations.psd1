@@ -93,13 +93,12 @@ AliasesToExport = @()
 FileList = @(
     'AUTHORS',
     'CHANGELOG.md',
-    'CODE_OF_CONDUCT.md',
     'LICENSE',
     'NEWS.md',
     'PrintNightmareMitigations.psd1',
     'PrintNightmareMitigations.psm1',
     'README.md',
-    'en-US/about_PrintNightmareMitigations.md',
+    'en-US/about_PrintNightmareMitigations.help.txt',
     'en-US/PrintNightmareMitigations-help.xml'
 )
 
