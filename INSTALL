@@ -1,0 +1,3 @@
+To install this module, download it from the PowerShell Gallery.
+
+Alternatively, place these files in a folder somewhere in your $env:PSModulePath.
