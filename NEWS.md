@@ -1,3 +1,6 @@
+# Version 1.0.1
+Version 1.0.1 of the PrintNightmareMitigations module was released on July 28, 2021.  This hides output when the module creates or modifies registry entries.  Other than that, behavior is not affected.
+
 # Version 1.0.0
 Version 1.0.0 of the PrintNightmareMitigations module was released on July 27, 2021.  It was the initial release.
 

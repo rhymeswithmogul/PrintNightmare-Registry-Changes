@@ -72,12 +72,12 @@ Function Set-PrintNightmareMitigation {
         }
         ElseIf (Test-Path -Path "$RegValues\NoWarningNoElevationOnInstall" -PathType Leaf) {
             Write-Verbose 'NoWarningNoElevationOnInstall is set improperly.'
-            Set-ItemProperty -Path $RegKey -Name 'NoWarningNoElevationOnInstall' -Value 0
+            Set-ItemProperty -Path $RegKey -Name 'NoWarningNoElevationOnInstall' -Value 0 | Out-Null
             Write-Output 'NoWarningNoElevationOnInstall is now set properly.  Changes take effect immediately.'
         }
         Else {
             Write-Verbose 'NoWarningNoElevationOnInstall is not set.'
-            New-ItemProperty -Path $RegKey -Name 'NoWarningNoElevationOnInstall' -Value 0 -Type DWORD
+            New-ItemProperty -Path $RegKey -Name 'NoWarningNoElevationOnInstall' -Value 0 -Type DWORD | Out-Null
             Write-Output 'NoWarningNoElevationOnInstall is now set properly.  Changes take effect immediately.'
         }
         #.endregion
@@ -98,12 +98,12 @@ Function Set-PrintNightmareMitigation {
         }
         ElseIf (Test-Path -Path "$RegValues\UpdatePromptSettings" -PathType Leaf) {
             Write-Verbose 'UpdatePromptSettings is set improperly.'
-            Set-ItemProperty -Path $RegKey -Name 'UpdatePromptSettings' -Value 0
+            Set-ItemProperty -Path $RegKey -Name 'UpdatePromptSettings' -Value 0 | Out-Null
             Write-Output  'UpdatePromptSettings is now set properly.  Changes take effect immediately.'
         }
         Else {
             Write-Verbose 'UpdatePromptSettings is not set.'
-            New-ItemProperty -Path $RegKey -Name 'UpdatePromptSettings' -Value 0 -Type DWORD
+            New-ItemProperty -Path $RegKey -Name 'UpdatePromptSettings' -Value 0 -Type DWORD | Out-Null
             Write-Output  'UpdatePromptSettings is now set properly.  Changes take effect immediately.'
         }
         #.endregion
@@ -127,12 +127,12 @@ Function Set-PrintNightmareMitigation {
             }
             ElseIf (Test-Path -Path "$RegValues\RestrictDriverInstallationToAdministrators" -PathType Leaf) {
                 Write-Verbose 'RestrictDriverInstallationToAdministrators is not set to restrict.'
-                Set-ItemProperty -Path $RegKey -Name 'RestrictDriverInstallationToAdministrators' -Value 1
+                Set-ItemProperty -Path $RegKey -Name 'RestrictDriverInstallationToAdministrators' -Value 1 | Out-Null
                 Write-Output  'RestrictDriverInstallationToAdministrators is now set accordingly.  Changes take effect immediately.'
             }
             Else {
                 Write-Verbose 'RestrictDriverInstallationToAdministrators is not defined.'
-                New-ItemProperty -Path $RegKey -Name 'RestrictDriverInstallationToAdministrators' -Value 1 -Type DWORD
+                New-ItemProperty -Path $RegKey -Name 'RestrictDriverInstallationToAdministrators' -Value 1 -Type DWORD | Out-Null
                 Write-Output  'RestrictDriverInstallationToAdministrators is now set accordingly.  Changes take effect immediately.'
             }
         }
